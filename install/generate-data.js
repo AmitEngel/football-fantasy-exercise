@@ -13,10 +13,10 @@ const teams = JSON.parse(fs.readFileSync(path.join(dataDir, 'teams.json'), 'utf-
 const pArr = [];
 
 d1.forEach((l, i) => pArr.push({
-   id: i + 1,
-   name: l.trim(),
-   position: Object.values(typedefs.PlayerPositionsEnum)[Math.floor(Math.random() * Object.values(typedefs.PlayerPositionsEnum).length)],
-   teamid: Math.floor(Math.random() * teams.length) + 1
+    id: i + 1,
+    name: l.trim(),
+    position: Object.values(typedefs.PlayerPositionsEnum)[Math.floor(Math.random() * Object.values(typedefs.PlayerPositionsEnum).length)],
+    teamid: Math.floor(Math.random() * teams.length) + 1
 }));
 
 fs.writeFileSync(path.join(dataDir, 'players.json'), JSON.stringify(pArr));

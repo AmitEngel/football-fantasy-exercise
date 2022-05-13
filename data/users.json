@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
     {
         "id": "47cc7837-fd92-4c96-a6ae-1f32011c4403",
@@ -22,3 +23,6 @@
         "playerIds": []
     }
 ]
+=======
+[{"id":"45ec0ce7-95da-4264-b5fb-57bbe6a9124a","first":"yaakov","last":"yaakov","email":"my@email.com","password":"abc123","playerIds":[]},{"id":"b1d1507d-f15a-4d8a-922e-1bacd410c616","first":"yaakov2","last":"yaakov2","email":"my2@email.com","password":"abc123","playerIds":[]},{"id":"c9c0c3e9-236f-4282-86f0-8668ccd72a41","first":"yaakov2","last":"yaakov2","email":"qq3@email.com","password":"abc123","playerIds":[]},{"id":"5959df98-14b4-495f-9ab2-fa5b5f34805a","first":"yaakov2","last":"yaakov2","email":"qq4@email.com","password":"abc123","playerIds":[]}]
+>>>>>>> afbb2508e5e10b249f1e9c5add21ecca392bdf69

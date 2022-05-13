@@ -20,8 +20,13 @@ playersCtrl.post('/', function (req, res) {
 })
 
 playersCtrl.get('/', function (req, res) {
-    const players = dal.read('player');
-    res.send(players);
+    if (req.query.token && req.query.token === 'xyz123') {
+        const players = dal.readByQuery('player', p => p.active === true);
+        res.send(players);
+    } else {
+        res.status(401).send();
+    }
+
 })
 
 playersCtrl.get('/position', function (req, res) {

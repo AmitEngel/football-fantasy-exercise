@@ -1,4 +1,32 @@
+<<<<<<< HEAD:readme.MD
 # football-fantasy-exercise
+=======
+## Rest
+### HTTP Verbs
+- `GET`: get model/s
+- `POST`: create model
+- `PUT`: update model
+- `DELETE`: delete model
+
+### Content-type
+- `www-form`: HTML form content type
+- `application/json`: JSON content type
+
+### Parameters - Content
+- `body` (req.body): `POST`, `PUT`
+- `querystring` (req.query): `POST`, `PUT`, `GET`, `DELETE` (ex: http://example.com/api/a?par1=1&par2=2) 
+- `params` (req.params): inside url segment `POST`, `PUT`, `GET`, `DELETE` (ex: http://example.com/api/a/1)
+
+### HTTP Status
+#### Success statuses
+- `201`: `post` created successfuly
+- `200`: `get`, `put`
+- `204`: `delete`
+
+## Data Access Layer - DAL
+
+>>>>>>> afbb2508e5e10b249f1e9c5add21ecca392bdf69:README.MD
+
 
 To join the game select a fantasy football squad of 15 players, consisting of:
 

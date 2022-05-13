@@ -2,21 +2,20 @@
 const fs = require('fs');
 
 function read(type) {
-    switch (type) {
-        case 'player':
-            return JSON.parse(fs.readFileSync('./data/players.json', 'utf-8'));
-        case 'team':
-            return JSON.parse(fs.readFileSync('./data/teams.json', 'utf-8'));
-    }
+    return JSON.parse(fs.readFileSync(`./data/${type}s.json`, 'utf-8'));
 }
 
+function readOneByQuery(type, filterFunc) {
+    return read(type).find(filterFunc);
+}
+
+function readByQuery(type, filterFunc) {
+    return read(type).filter(filterFunc);
+}
+
+
 function readOne(type, id) {
-    switch (type) {
-        case 'player':
-            return read(type).find(p => p.id == id);
-        case 'team':
-            return read(type).find(t => t.id == id);
-    }
+    return read(type).find(p => p.id == id);
 }
 
 function update(type, id, entity) {
@@ -33,19 +32,9 @@ function update(type, id, entity) {
 }
 
 function add(type, entity) {
-    let file;
-    switch (type) {
-        case 'player':
-            file = './data/players.json';
-            break;
-        case 'team':
-            file = './data/teams.json';
-            break;
-    }
-
-    const snap = JSON.parse(fs.readFileSync(file, 'utf-8'));
+    const snap = read(type);
     snap.push(entity);
-    fs.writeFileSync(file, JSON.stringify(snap));
+    fs.writeFileSync(`./data/${type}s.json`, JSON.stringify(snap));
     return true;
 }
 
@@ -53,6 +42,8 @@ function add(type, entity) {
 module.exports = {
     add,
     read,
+    readByQuery,
+    readOneByQuery,
     readOne,
     update
 }

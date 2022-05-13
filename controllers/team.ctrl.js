@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
 // http://localhost:8989/api/team/1
 router.get('/:id', function (req, res) {
     const team = dal.readOne('team', req.params.id);
-    res.send(team);
+    res.send(teams);
 });
 
 module.exports = router;
