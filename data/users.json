@@ -1,0 +1,24 @@
+[
+    {
+        "id": "47cc7837-fd92-4c96-a6ae-1f32011c4403",
+        "first": "hkhkjh",
+        "last": "hghgh",
+        "playerIds": []
+    },
+    {
+        "id": "df0ac457-1848-4c29-8a79-c45be44e9c0e",
+        "first": "hkhkjh",
+        "last": "hghgh",
+        "email": "asd@asd.com",
+        "password": "1234",
+        "playerIds": []
+    },
+    {
+        "id": "9a309a16-23c9-4ecf-bc5c-9c7dbf646dee",
+        "first": "Amit",
+        "last": "Engel",
+        "email": "bbb@ddd.com",
+        "password": "5555",
+        "playerIds": []
+    }
+]
